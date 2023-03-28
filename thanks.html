@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensagem Enviada!</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./img/icon.png" type="img/png">
+</head>
+<body>
+  <div class="container-header">
+    <header>
+        <div class="logo">
+            <a href="#"><img src="./img/logoblack.png" alt=""></a>
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="/index.html" onclick="seleccionar()">RETORNAR</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+  <div class="thanks_init">
+    <div class="thanksBanner">
+      <h1><span>Obrigado pelo Contato!</span></h1>
+      <p id="typeWrite">Sua mensagem foi enviada com sucesso. Em breve entrarei em contato.</p>
+
+      <a href="index.html" class="buttonThanks">
+        <button>Home
+          <span class="overlay"></span>
+        </button>
+      </a>
+    </div>
+  </div>
+  <!--script para efeito de datilografia da página-->
+  <script>
+    //Efeito datilografia
+    const typeWriter = document.getElementById('typeWrite');
+    const text = typeWriter.innerHTML;
+    typeWriter.innerHTML = '';
+
+    let i = 0;
+    const speed = 50;
+
+    function type() {
+      if (i < text.length) {
+        typeWriter.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      }
+    }
+
+    setTimeout(type, 1000);
+  </script>
+</body>
+</html>
