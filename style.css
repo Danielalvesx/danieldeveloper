@@ -39,7 +39,6 @@ html {
 }
 
 .container-header header .logo a img{
-    width: 70px
     transition: all 1s;
     cursor: pointer;
     border-radius: 100%;
